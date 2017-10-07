@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<style>
+#wrapper {
+	margin: 0 auto;
+}
+#header {
+	background: url(d4.jpg);
+	background-size: cover;
+	width: 100%
+	height:10px;
+	margin-bottom: 10px;
+}
+#header img {
+margin-left: 10px;
+margin-top: 10px;
+}
+#header h3 {
+	margin-left: 10px;
+	color: blue;
+	margin-top: 1px;
+}
+#content {
+	height: 640px;
+	background: url(d4.jpg);
+	background-size: cover;
+	margin-top: 10px;
+}
+#login {
+	margin-top: 170px;
+	margin-right: 490px;
+	width: 325px;
+	height: 260px;
+	float: right;
+	background-color: white;
+	background:rgba(0,225,225, 0.8);
+	padding-top: 12px;
+}
+#login a {
+text-decoration: none;
+}
+#login select {
+font-size: 13px;
+width: 100px;
+margin-left: 28px;
+border: 3px solid #0288D1;
+text-align: center;
+}
+#log {
+font-size: 30px;
+}
+.kolom {
+font-size: 15px;
+text-align: center;
+width: 150px;
+height: 23px;
+border-radius: 8px;
+border: 3px solid #0288D1;
+}
+.tombol {
+border-radius: 5px;
+border: 2px solid #0288D1;
+background-color: blue;
+color: white;
+}
+.tombol:hover {
+  background-color: white;
+  color: #0288D1;
+  border: 2px solid white;
+} 
+.kata {
+font-size: 20px;
+}
+.cek {
+font-size: 15px;
+margin-left: 37px;
+margin-top: 8px;
+}
+#biodata {
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 250px;
+	height: 150px;
+	float: left;
+	background: #8f00ff;
+}
+#biodata ul{
+	margin-left: 10px;
+}
+#biodata li a{
+text-decoration: none;
+}
+#footer {
+	width: 100%;
+	height: 30px;
+	background: #0000BB;
+	padding-top: 10px;
+	margin-top: 10px;
+}
+</style>
+	<title>Tugas Web</title>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<img src="gaptek.png" height:"250px" width="200	px" alt="logo" />
+	<br />
+		<b><h3>Ini adalah halaman Web buat tugas Web.. :v</h3></b>
+	</div>
+<div id="content">
+<div id="login">
+	<center>
+		<a id="log"><b>LOG-IN ADMIN</b></a>
+		<p />
+			<form>
+			<table>
+			<tr>
+				<td><a class="kata">Username</a></td> <td><input type="text" size="18" maxlength="10" placeholder="Username" name="username" class="kolom" /></td>
+			</tr>
+			<tr></tr>
+			<tr></tr>
+			<tr>
+				<td><a class="kata">Password</a></td> <td><input type="password" size="18" maxlength="10" placeholder="Password" name="password" class="kolom" /></td>
+			</tr>
+			</table>
+			<p>
+	</center>
+			<div class="cek">
+				<input type="checkbox" name="cek">Inget akoh yah :"
+			</div>
+	<center>
+			<p>
+				<input type="submit" name="submit" id="submit" value="Log In" class="tombol" /> <button class="tombol">Cancel</button>
+			<p>
+				<b>Belum punya akun? Daftar <a href="">disini</a></b>
+			</form>
+	</center>
+</div>
+<div id="biodata">
+<center><h2>Biodata</h2></center>
+	<ul>
+		<li>Nama  : Irfan Kurniawan</li>
+		<li>NPM   : 15402145</li>
+		<li>Kelas : MIF K41/15</li>
+	</ul>
+</div>
+</div>
+<div id="footer">
+	<center>
+		<strong>
+			By Irfankurrr yeah.. :v
+		</strong>
+	</center>
+</div>
+</div>
+</body>
+</HTML>
+
+<?php
+include('login.php'); // Memasuk-kan skrip Login 
+
+if(isset($_SESSION['login_user'])){
+header("location: profile.php");
+}
+?>
