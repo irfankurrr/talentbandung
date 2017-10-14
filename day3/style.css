@@ -20,9 +20,9 @@ body {
 }
 
 .overlay{
-background: #311d5e;
+background: #8576a8;
 overflow: hidden;
-height: 300px;
+height: cover;
 }
 
 a {
